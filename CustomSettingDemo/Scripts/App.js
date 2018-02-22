@@ -28,5 +28,19 @@ jQuery.noConflict();
     if (colorValue == 3) {
         $("#myString").html(textValue).css("color", "blue");
     };
+})(jQuery);
 
+(function ($) {
+var bColorValue = getQueryStringParameter('MyEnum1');
+var textValue = getQueryStringParameter('MyString');
+// Do something based on incoming param values (Background value)
+if (bColorValue == 1) {
+    $("#myString").html(textValue).css("background-color", "pink");
+};
+if (bColorValue == 2) {
+    $("#myString").html(textValue).css("background-color", "silver");
+};
+if (bColorValue == 3) {
+    $("#myString").html(textValue).css("background-color", "yellow");
+};
 })(jQuery);

@@ -5,7 +5,7 @@
     <!-- Content element identifies the location of the page that will render inside the client web part
          Properties are referenced on the query string using the pattern _propertyName_
          Example: Src="~appWebUrl/Pages/ClientWebPart1.aspx?Property1=_property1_" -->
-    <Content Type="html" Src="~appWebUrl/Pages/CustomizeAppDemo.aspx?{StandardTokens}&amp;MyString=_MyString_&amp;MyEnum=_MyEnum_" />
+    <Content Type="html" Src="~appWebUrl/Pages/CustomizeAppDemo.aspx?{StandardTokens}&amp;MyString=_MyString_&amp;MyEnum=_MyEnum_&amp;MyEnum1=_MyEnum1_" />
 
     <!-- Define properties in the Properties element.
          Remember to put Property Name on the Src attribute of the Content element above. -->
@@ -21,6 +21,19 @@
           <EnumItem WebDisplayName="Red" Value="1"/>
           <EnumItem WebDisplayName="Green" Value="2"/>
           <EnumItem WebDisplayName="Blue" Value="3"/>
+        </EnumItems>
+      </Property>
+      <Property Name="MyEnum1"
+                Type="enum"
+                RequiresDesignerPermission="true"
+                WebCategory="Color"
+                WebDisplayName="Set Background color"
+                DefaultValue="1"
+                >
+        <EnumItems>
+          <EnumItem WebDisplayName="Pink" Value="1"/>
+          <EnumItem WebDisplayName="Silver" Value="2"/>
+          <EnumItem WebDisplayName="Yellow" Value="3"/>
         </EnumItems>
       </Property>
       <Property Name="MyString"
